@@ -7,12 +7,11 @@ computer vision to determine the position of robot on the field.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Computer Vision Event](#computer-vision-event)
-  - [Objectives](#objectives)
-    - [Find the target](#find-the-target)
-    - [Determine angle and range to target](#determine-angle-and-range-to-target)
-    - [Calculate robot's field position](#calculate-robots-field-position)
-  - [Scoring](#scoring)
+- [Objectives](#objectives)
+  - [Find the target](#find-the-target)
+  - [Determine angle and range to target](#determine-angle-and-range-to-target)
+  - [Calculate robot's field position](#calculate-robots-field-position)
+- [Scoring](#scoring)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
