@@ -34,17 +34,21 @@ Given an image, how well can you screen out false reflections and isolate the
 target of interest? This filtering should work from multiple angles and
 distances.
 
-Success is indicated by obtaining accurate data returned by the Deadeye system.
+Points are awarded for obtaining accurate data returned by the Deadeye system.
 
 ### Determine angle and range to target
 
 Use the data returned by the Deadeye system to calculate the angle and range to
 the target with respect to the robot.
 
+Points are awarded for based on the angle and range error.
+
 ### Calculate robot's field position
 
 Having calculated angle and range to the target, can you calculate the position
 of the robot on the field?
+
+Points are awarded for based on the position error.
 
 ## Scoring
 
