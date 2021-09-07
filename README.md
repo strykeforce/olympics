@@ -31,7 +31,7 @@ participate in.
 
 Following kick-off each team creates a name for themselves.
 
-### Olympic Events
+### Events
 
 - [Computer Vision](./vision/README.md)
 - Autonomous Pathfinding
@@ -50,7 +50,7 @@ Following kick-off each team creates a name for themselves.
   teams to participate.
 - The team with the most points wins the Olympics!
 
-## Preparing for the Olympics
+## Preparing for the Events
 
 Following the kick-off teams will have at least four weeks to prepare for
 competition. During this time the teams will work on learning how to achieve
