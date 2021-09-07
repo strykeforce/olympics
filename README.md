@@ -10,9 +10,9 @@ culminating in a two-night competition.
 
 - [Before Olympics Start](#before-olympics-start)
 - [Olympics Kick-off](#olympics-kick-off)
-  - [Olympic Events](#olympic-events)
+  - [Events](#events)
   - [Scoring](#scoring)
-- [Preparing for the Olympics](#preparing-for-the-olympics)
+- [Preparing for the Events](#preparing-for-the-events)
 - [Olympics Competition Week](#olympics-competition-week)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
