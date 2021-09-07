@@ -4,6 +4,20 @@ Stryke Force Olympics is a team event to build skills that will be useful for
 the upcoming FRC season. The Olympics take place over a month in the fall,
 culminating in a two-night competition.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Before Olympics Start](#before-olympics-start)
+- [Olympics Kick-off](#olympics-kick-off)
+  - [Olympic Events](#olympic-events)
+  - [Scoring](#scoring)
+- [Preparing for the Olympics](#preparing-for-the-olympics)
+- [Olympics Competition Week](#olympics-competition-week)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## Before Olympics Start
 
 - All FRC students are placed into one of four teams.
