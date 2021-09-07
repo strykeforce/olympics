@@ -1,0 +1,22 @@
+{
+  "name": "olympics",
+  "version": "1.0.0",
+  "description": "Stryke Force Olympics",
+  "main": "index.js",
+  "scripts": {
+    "toc": "doctoc README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strykeforce/olympics.git"
+  },
+  "author": "Stryke Force",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strykeforce/olympics/issues"
+  },
+  "homepage": "https://github.com/strykeforce/olympics#readme",
+  "dependencies": {
+    "doctoc": "^2.0.1"
+  }
+}
