@@ -25,14 +25,6 @@ We utilize the WIPLib command based robot framework each season for our robots. 
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Elevator and Arm Control Event
-
-We utilize the WIPLib command based robot framework each season for our robots. Learning to utilize commands and command groups effectively is a key building block towards writing code for the robot. Everything action the robot takes on the field is a single command or sequence of commands working together.
-
-<!-- START doctoc-->
-
-<!-- END doctoc-->
-
 ## Objectives
 
 There are three objectives in this event, each objective increases in complexity. Each objective gives points towards winning the elevator and arm control event.
