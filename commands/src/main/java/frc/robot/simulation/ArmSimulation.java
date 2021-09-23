@@ -96,13 +96,6 @@ public class ArmSimulation implements Sendable {
     }
 
     public void update(){
-        /*double curPosTicks = armTalon.getSelectedSensorPosition();
-        if(Math.abs(lastPosTicks - curPosTicks) > 20){
-            //Re-Zero Happened
-            //zeroSimulation();
-            lastPosTicks = (int) curPosTicks;
-            System.out.println("Arm Zeroed Detect");
-        }*/
         //Update Simulation State based on Talon Setpoint
         double outPerc = armTalon.getMotorOutputPercent();
         armSim.setInputVoltage(-outPerc * RobotController.getBatteryVoltage());
@@ -125,7 +118,6 @@ public class ArmSimulation implements Sendable {
         int absPos = armTalon.getSensorCollection().getPulseWidthPosition() & 0xFFF;
         newAbs = Math.floorMod(absPos + offset, 4096);
         armTalon.getSimCollection().addPulseWidthPosition(newAbs - absPos);
-        //System.out.println("Absolute Position: " + absPos + ", Offset: " + offset + ", new absolute: " + newAbs + ", added position: " + (newAbs - absPos));
 
         int velTicks = (int) (speedRpm * ArmConstants.kTicksPerDeg * 360 / 60.0 / 10.0); //Ticks per 100ms
         armTalon.getSimCollection().setQuadratureVelocity(velTicks);
