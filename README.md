@@ -35,7 +35,7 @@ Following kick-off each team creates a name for themselves.
 
 - [Computer Vision](./vision/README.md)
 - Autonomous Pathfinding
-- Elevator and Arm Control
+- [Elevator and Arm Control](./commands/README.md)
 - Sponsor List and Presentation
 - Create Alliance Award
 - Assemble Gearbox

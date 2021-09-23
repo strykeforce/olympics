@@ -1,3 +1,26 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  
+
+- [Elevator and Arm Control Event](#elevator-and-arm-control-event)
+  - [Objectives](#objectives)
+    - [**Open-Loop Operation**](#open-loop-operation)
+    - [**Closed-Loop Operation**](#closed-loop-operation)
+    - [**Collision/Constraint Management**](#collisionconstraint-management)
+  - [Scoring](#scoring)
+  - [Getting Started](#getting-started)
+    - [Zeroing Axes](#zeroing-axes)
+  - [Robot Configuration Details](#robot-configuration-details)
+    - [Robot Sizing/Graphics](#robot-sizinggraphics)
+      - [Dimensions and Max Travel Graphics](#dimensions-and-max-travel-graphics)
+      - [Max Travel Graphics](#max-travel-graphics)
+    - [Talons](#talons)
+    - [Limit Switches](#limit-switches)
+    - [Elevator Constants](#elevator-constants)
+    - [Arm Constants](#arm-constants)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Elevator and Arm Control Event
 
 We utilize the WIPLib command based robot framework each season for our robots. Learning to utilize commands and command groups effectively is a key building block towards writing code for the robot. Everything action the robot takes on the field is a single command or sequence of commands working together.
