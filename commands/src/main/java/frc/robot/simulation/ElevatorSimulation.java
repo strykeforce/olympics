@@ -24,8 +24,8 @@ public class ElevatorSimulation implements Sendable{
     private double gearRatio = ElevatorConstants.kFirstStage * ElevatorConstants.kSecondStage;
     private double carriageMassKg = Units.lbsToKilograms(ElevatorConstants.kCarriageMasslb);
     private double drumRadiusMeters = Units.inchesToMeters(ElevatorConstants.kDrumRadiusIn);
-    private double minHeightMeters = Units.inchesToMeters(ElevatorConstants.kMinTicks * ElevatorConstants.kTicksPerIn + ElevatorConstants.kInOffset);
-    private double maxHeightMeters = Units.inchesToMeters(ElevatorConstants.kMaxTicks * ElevatorConstants.kTicksPerIn + ElevatorConstants.kInOffset);
+    private double minHeightMeters = Units.inchesToMeters(ElevatorConstants.kMinTicks / ElevatorConstants.kTicksPerIn + ElevatorConstants.kInOffset);
+    private double maxHeightMeters = Units.inchesToMeters(ElevatorConstants.kMaxTicks / ElevatorConstants.kTicksPerIn + ElevatorConstants.kInOffset);
 
     //State Variables
     private static boolean hasZeroed = false;
@@ -122,7 +122,7 @@ public class ElevatorSimulation implements Sendable{
     }
 
     protected double getInnerCarriageHeightM(){
-        return elevatorSim.getPositionMeters() * 2;
+        return elevatorSim.getPositionMeters() * 2 + elevatorSim.getPositionMeters();
     }
 
     //Sendable Interface

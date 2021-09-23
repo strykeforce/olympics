@@ -14,6 +14,10 @@ package frc.robot;
  */
 public final class Constants {
 
+    //SuperStructure Dimensions
+    public static final double kStructureHeightM = 0.5;
+    public static final double kStructureOpeningWidthM = 0.6;
+
     public static final class ElevatorConstants{
         public static final int kAbsZeroTicks = 1000;
 
@@ -49,7 +53,7 @@ public final class Constants {
         
         //Simulation Constants
         public static final double kArmMassLb = 0.5;
-        public static final double kArmLengthIn = 18.0;
+        public static final double kArmLengthM = 0.45;
         public static final double kTicksPerDeg = 34.0;
         public static final double kMaxAngleDeg = 360.0;
         public static final double kMinAngleDeg = -180.0;

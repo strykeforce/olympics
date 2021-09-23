@@ -55,9 +55,51 @@ In the case of a tie the average of the points for that place and the place one 
 
 The links below point to helpful getting started docs for command-based programming. 
 
+* WPILib documentation:
+    * [Command-Based](https://docs.wpilib.org/en/stable/docs/software/commandbased/index.html?)
+    * [Simulating Robot Projects](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-simulation/index.html)
+* CTRE Documentation Basics:
+    * [Open Loop Configuration](https://docs.ctre-phoenix.com/en/stable/ch13_MC.html#open-loop-features)
+    * [Limit Switches and Soft Limits](https://docs.ctre-phoenix.com/en/stable/ch13_MC.html#limit-switches)
+    * [Closed Loop Basics](https://docs.ctre-phoenix.com/en/stable/ch16_ClosedLoop.html)
+* Java API docs:
+    * [CTRE TalonSRX](https://www.ctr-electronics.com/downloads/api/java/html/classcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1can_1_1_talon_s_r_x.html)
+    * [WPILib](https://first.wpi.edu/wpilib/allwpilib/docs/release/java/index.html)
+
+### Zeroing Axes
+
+When an axis needs to have a known location (which both the elevator and arm are in thi example), the position of that axis needs to be set as part of initializing that axis. To set that position the current absolute encoder position is compared to some known zero location (stored in the constants file) and used to set the current relative encoder position.
+
+If the full travel of the axis is <= one full rotation of the encoder, no additional sensors are needed and the absolute encoder can be used to zero the axis. If the full travel of the axis exceeds one encoder revolution then an additional sensor is needed to determine tha the sensor is in the correct revolution to zero the axis. Both the arm and the elevator are axes for which this additional sensor is necessary. In both cases a limit switch hooked to one of the inputs of the TalonSRX is used. This limit switch returns true if the axis is in the correct location to perform zeroing. 
+
 ## Robot Configuration Details
 
 The tables below contain specific configuration details for the robot as well as tuning parameters. These tuning parameters are not optimized but they are sufficient for the axis to move in closed-loop motion magic mode. The focus of this challenge is not tuning and the parameters do not need to be further optimized.
+
+### Robot Sizing/Graphics
+
+| Item | Dimension | Units |
+| -- | -- | -- |
+| Arm Length | 0.45 | m |
+| Arm Max Angles | +/- 270 | deg |
+| Arm Ticks per Deg | 34 | ticks/deg |
+| Elevator Outer Carriage Max Ticks | 33,000 | ticks |
+| Elevator Ticks per Inch | 1120 | ticks/in |
+| Elevator Inner Carriage travel ratio | 2:1 | - |
+| Support Structure Height | 0.5 | m |
+| Support Structure Opening Width | 0.6 | m |
+
+&nbsp;
+
+#### Dimensions and Max Travel Graphics
+
+<img src="docs/olympics-pic-2.png" width="500">
+
+#### Max Travel Graphics
+
+<img src="docs/olympics-pic-1.png" width="500">
+
+&nbsp;
 
 ### Talons
 
@@ -66,6 +108,7 @@ The tables below contain specific configuration details for the robot as well as
 | Elevator | SRX | elevator | 20 |
 | Arm | SRX | arm | 30 |
 
+&nbsp;
 
 ### Limit Switches
 
@@ -74,6 +117,7 @@ The tables below contain specific configuration details for the robot as well as
 | elevatorTalon | REV | NO | zeroing elevator |
 | armTalon | FWD | NO | zeroing arm | 
 
+&nbsp;
 
 ### Elevator Constants
 
@@ -87,6 +131,7 @@ The tables below contain specific configuration details for the robot as well as
 | motionCruise | 4000 |
 | absZeroTicks | 1000 |
 
+&nbsp;
 
 ### Arm Constants
 

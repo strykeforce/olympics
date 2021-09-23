@@ -22,7 +22,7 @@ public class ArmSimulation implements Sendable {
     
     private DCMotor armGearbox = DCMotor.getVex775Pro(1);
     private double gearRatio = ArmConstants.kFirstStage * ArmConstants.kSecondStage;
-    private double armLengthMeters = Units.inchesToMeters(ArmConstants.kArmLengthIn);
+    private double armLengthMeters = ArmConstants.kArmLengthM;
     private double armMassKg = Units.lbsToKilograms(ArmConstants.kArmMassLb);
     private double minAngleRads = Units.degreesToRadians(ArmConstants.kMinAngleDeg);
     private double maxAngleRads = Units.degreesToRadians(ArmConstants.kMaxAngleDeg);
@@ -148,7 +148,7 @@ public class ArmSimulation implements Sendable {
     }
 
     //Sendable Interface
-    DoubleSupplier getAngleDeg = () -> Units.radiansToDegrees(armSim.getAngleRads());
+    DoubleSupplier getAngleDeg = () -> Units.radiansToDegrees(armSim.getAngleRads()) - 90;
     DoubleSupplier getVelRpm = () -> Units.radiansPerSecondToRotationsPerMinute(armSim.getVelocityRadPerSec());
     DoubleSupplier getCurrent = () -> armSim.getCurrentDrawAmps();
     DoubleSupplier getPosTicks = () -> lastPosTicks;
