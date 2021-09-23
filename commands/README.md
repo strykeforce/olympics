@@ -35,11 +35,9 @@ We utilize the WIPLib command based robot framework each season for our robots. 
 
 ## Objectives
 
-***
+There are three objectives in this event, each objective increases in complexity. Each objective gives points towards winning the elevator and arm control event.
 
-There are three objectives in this event, each objective increases in complexity. Each objective gives points towards winning the elevator and arm contorl event.
-
-This repository contains the teplate project to start with. This project contains blank files for the two subsystems and classes controlling the simulation of these axes.
+This repository contains the template project to start with. This project contains blank files for the two subsystems and classes controlling the simulation of these axes. The simulation classes should not need to be touched.
 
 ### **Open-Loop Operation**
 
@@ -71,8 +69,6 @@ Points are awarded based on being able to move both axes while fully respecting 
 
 ## Scoring
 
-***
-
 The following points are awarded to all participating teams in order of finish and applied towards the overall Olympics score.
 
 1. W points
@@ -83,8 +79,6 @@ The following points are awarded to all participating teams in order of finish a
 In the case of a tie the average of the points for that place and the place one below will be awarded to both teams. For example, a tie for first place will give both teams the average of the first and second place points (N points).
 
 ## Getting Started
-
-***
 
 The links below point to helpful getting started docs for command-based programming. 
 
@@ -102,13 +96,11 @@ The links below point to helpful getting started docs for command-based programm
 
 ### Zeroing Axes
 
-When an axis needs to have a known location (which both the elevator and arm are in thi example), the position of that axis needs to be set as part of initializing that axis. To set that position the current absolute encoder position is compared to some known zero location (stored in the constants file) and used to set the current relative encoder position.
+When an axis needs to have a known location (which both the elevator and arm are in this example), the position of that axis needs to be set as part of initializing that axis. To set that position the current absolute encoder position is compared to some known zero location (stored in the constants file) and used to set the current relative encoder position.
 
-If the full travel of the axis is <= one full rotation of the encoder, no additional sensors are needed and the absolute encoder can be used to zero the axis. If the full travel of the axis exceeds one encoder revolution then an additional sensor is needed to determine tha the sensor is in the correct revolution to zero the axis. Both the arm and the elevator are axes for which this additional sensor is necessary. In both cases a limit switch hooked to one of the inputs of the TalonSRX is used. This limit switch returns true if the axis is in the correct location to perform zeroing. 
+If the full travel of the axis is <= one full rotation of the encoder, no additional sensors are needed and the absolute encoder can be used to zero the axis. If the full travel of the axis exceeds one encoder revolution then an additional sensor is needed to determine that the sensor is in the correct revolution to zero the axis. Both the arm and the elevator are axes for which this additional sensor is necessary. In both cases a limit switch hooked to one of the inputs of the TalonSRX is used. This limit switch returns true if the axis is in the correct location to perform zeroing. 
 
 ## Robot Configuration Details
-
-***
 
 The tables below contain specific configuration details for the robot as well as tuning parameters. These tuning parameters are not optimized but they are sufficient for the axis to move in closed-loop motion magic mode. The focus of this challenge is not tuning and the parameters do not need to be further optimized.
 
