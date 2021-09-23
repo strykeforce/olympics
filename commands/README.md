@@ -50,7 +50,7 @@ Basic Constraints
 
 Points are awarded for respecting the constraints above and being able to move each axis through the full range of motion.
 
-See [Getting Started] (#getting-started) section for tips and resources for getting started in command-based programming.
+See [Getting Started](#getting-started) section for tips and resources for getting started in command-based programming.
 
 ### **Closed-Loop Operation**
 
