@@ -134,7 +134,7 @@ The tables below contain specific configuration details for the robot as well as
 
 | Device Connected | FWD/REV | NO/NC | Purpose | 
 | -- | -- | -- | -- |
-| elevatorTalon | REV | NO | zeroing elevator |
+| elevatorTalon | FWD | NO | zeroing elevator |
 | armTalon | FWD | NO | zeroing arm | 
 
 &nbsp;
