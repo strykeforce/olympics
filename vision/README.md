@@ -1,4 +1,8 @@
 # Computer Vision Event
+<!--
+9/23 kick-off
+11/11 end of competition
+-->
 
 Most seasons we use a camera on our robot to help us do things like
 shoot at a goal or locate objectives on the field. Doing this quickly and
@@ -77,3 +81,8 @@ and second place points to each team (N points).
 
 You will use the Deadeye vision system's web dashboard to configure the camera
 to detect the target and filter out false targets.
+
+Access the Deadeye dashboard [here](http://192.168.3.10/).
+
+There are several cameras available (`H0`, `H1`, ...) that you can configure to
+detect the target and filter out false images.
