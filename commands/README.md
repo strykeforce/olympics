@@ -46,11 +46,15 @@ Points are awarded for respecting the constraints above and being able to move e
 
 See [Getting Started](#getting-started) section for tips and resources for getting started in command-based programming.
 
+**Awards: 5pts**
+
 ### **Closed-Loop Operation**
 
 When given a final position for both the arm and the elevator, move both axes to this final position. The same constraints from objective 1 still apply.
 
 Points are awarded based on respecting the constraints and speed of moving both axes to the final position.
+
+**Awards: 10pts**
 
 ### **Collision/Constraint Management**
 
@@ -58,17 +62,19 @@ Give physical constraints related to collsions with the arm and the chassis, pla
 
 Points are awarded based on being able to move both axes while fully respecting the collision constraints and for efficiency of the path chosen for the two axes to avoid the collision.
 
+**Awards: 15pts**
+
 
 ## Scoring
 
 The following points are awarded to all participating teams in order of finish and applied towards the overall Olympics score.
 
-1. W points
-2. X points
-3. Y points
-4. Z points
+1. 20 points
+2. 15 points
+3. 10 points
+4. 5 points
 
-In the case of a tie the average of the points for that place and the place one below will be awarded to both teams. For example, a tie for first place will give both teams the average of the first and second place points (N points).
+In the case of a tie the average of the points for that place and the place one below will be awarded to both teams. For example, a tie for first place will give both teams the average of the first and second place points (17.5 points).
 
 ## Getting Started
 
