@@ -27,9 +27,9 @@ computer vision to determine the position of simulated robot on the field.
 
 ## Objectives
 
-There are three objectives in this event, each a bit more challenging then the
-previous. Each objective gives points towards winning the computer vision
-event.
+There are three objectives in this event, each incrementally more challenging
+then the previous. Each objective gives points towards winning the computer
+vision event.
 
 This repository contains a template robot project to get you started as well as
 sample target images you will use while developing and testing your solutions.
@@ -41,6 +41,8 @@ programs; just be aware—new photos will be provided for the actual event!
 
 ### Find the target
 
+Awards: **5 points**
+
 Given an image, how well can you screen out false targets and isolate the real
 target? This filtering should work from multiple angles and distances.
 
@@ -51,12 +53,16 @@ from the Deadeye system to your robot code.
 
 ### Determine angle and range to target
 
+Awards: **10 points**
+
 Use the data returned by the Deadeye system to calculate the angle and range to
 the target with respect to the robot.
 
 Points are awarded based on the least angle and range error.
 
 ### Calculate robot's field position
+
+Awards: **15 points**
 
 Having calculated angle and range to the target, can you calculate the position
 of the robot on the field?
@@ -68,10 +74,10 @@ Points are awarded based on the least position error.
 The following points are awarded to all participating teams in order of finish
 and applied towards the overall Olympics score.
 
-1. W points
-2. X points
-3. Y points
-4. Z points
+1. first place - 20 points
+2. second place - 15 points
+3. third place - 10 points
+4. fourth place - 5 points
 
 In the case of a tie, the average of the available points will be given to each
 team. For example, a tie for first place will award the average of the first
@@ -82,7 +88,18 @@ and second place points to each team (N points).
 You will use the Deadeye vision system's web dashboard to configure the camera
 to detect the target and filter out false targets.
 
-Access the Deadeye dashboard [here](http://192.168.3.10/).
+Each team will have access to their own Deadeye unit:
 
-There are several cameras available (`H0`, `H1`, ...) that you can configure to
-detect the target and filter out false images.
+- [deadeye-h](http://192.168.3.10)
+- [deadeye-i](http://192.168.3.11)
+- [deadeye-j](http://192.168.3.12)
+- [deadeye-k](http://192.168.3.13)
+
+
+There are three cameras available in each Deadeye unit, each configured with
+one of the standard vision processing pipelines. For example, Deadeye unit H
+has:
+
+- `H0` - UprightRectPipeline
+- `H1` - MinAreaRectPipeline
+- `H2` - TargetListPipeline
