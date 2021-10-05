@@ -148,4 +148,11 @@ gradle-app.setting
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
+# # VS Code Specific Java Settings
+.classpath
+.project
+.settings/
+bin/
+imgui.ini
+
 # End of https://www.toptal.com/developers/gitignore/api/gradle,macos,intellij+all
