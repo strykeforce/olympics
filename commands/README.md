@@ -6,22 +6,21 @@ We utilize the WIPLib command based robot framework each season for our robots. 
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
 
-- [Elevator and Arm Control Event](#elevator-and-arm-control-event)
-  - [Objectives](#objectives)
-    - [**Open-Loop Operation**](#open-loop-operation)
-    - [**Closed-Loop Operation**](#closed-loop-operation)
-    - [**Collision/Constraint Management**](#collisionconstraint-management)
-  - [Scoring](#scoring)
-  - [Getting Started](#getting-started)
-    - [Zeroing Axes](#zeroing-axes)
-  - [Robot Configuration Details](#robot-configuration-details)
-    - [Robot Sizing/Graphics](#robot-sizinggraphics)
-      - [Dimensions and Max Travel Graphics](#dimensions-and-max-travel-graphics)
-      - [Max Travel Graphics](#max-travel-graphics)
-    - [Talons](#talons)
-    - [Limit Switches](#limit-switches)
-    - [Elevator Constants](#elevator-constants)
-    - [Arm Constants](#arm-constants)
+- [Objectives](#objectives)
+  - [**Open-Loop Operation**](#open-loop-operation)
+  - [**Closed-Loop Operation**](#closed-loop-operation)
+  - [**Collision/Constraint Management**](#collisionconstraint-management)
+- [Scoring](#scoring)
+- [Getting Started](#getting-started)
+  - [Zeroing Axes](#zeroing-axes)
+- [Robot Configuration Details](#robot-configuration-details)
+  - [Robot Sizing/Graphics](#robot-sizinggraphics)
+    - [Dimensions and Max Travel Graphics](#dimensions-and-max-travel-graphics)
+    - [Max Travel Graphics](#max-travel-graphics)
+  - [Talons](#talons)
+  - [Limit Switches](#limit-switches)
+  - [Elevator Constants](#elevator-constants)
+  - [Arm Constants](#arm-constants)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

@@ -2,6 +2,22 @@
 
 Being able to navigate smoothly and accurately between two locations on the field completely autonomously during a match requires a couple key items: knowledge of the robot's current location on the field (odometry), a planned path (trajectory), and  a control loop to tie these two items together. This event focuses on optimizing trajectories on a couple key performances metrics: path accuracy and speed of path completion. 
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents** 
+
+  - [Objectives](#objectives)
+    - [Straight Line Path](#straight-line-path)
+    - [Figure Eight Path](#figure-eight-path)
+    - [Bounce Path](#bounce-path)
+  - [Scoring](#scoring)
+    - [Scoring - Penalties](#scoring---penalties)
+  - [Getting Started](#getting-started)
+    - [TOML File Format](#toml-file-format)
+  - [Bonus: *"the why"* -  Auton Highlight Reel](#bonus-the-why----auton-highlight-reel)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## Objectives
 
@@ -41,12 +57,12 @@ This objective involves driving a path that intentionally hits two markers befor
 
 The following points are awarded to all participating teams in order of finish and applied towards the overall Olympics score.
 
-1. W points
-2. X points
-3. Y points
-4. Z points
+1. 20 points
+2. 15 points
+3. 10 points
+4. 5 points
 
-In the case of a tie the average of the points for that place and the place one below will be awarded to both teams. For example, a tie for first place will give both teams the average of the first and second place points (N points).
+In the case of a tie the average of the points for that place and the place one below will be awarded to both teams. For example, a tie for first place will give both teams the average of the first and second place points (17.5 points).
 
 ### Scoring - Penalties
 
@@ -89,7 +105,7 @@ Some other helpful resources for troubleshooting/completing the challenges inclu
 
 ### TOML File Format
 
-An [example TOML file](src/main/paths/examplePath.toml) has been provided to show proper file formatting. Key information in the file is as follows:
+An [example TOML file](./path/src/main/paths/examplePath.toml) has been provided to show proper file formatting. Key information in the file is as follows:
 - **Starting Pose:** the x and y position of the starting waypoint (in meters) and the robot angle at that position (in degrees)
     - The angle for this pose is easiest to think about when considering a tank drivetrain - this is the angle of the wheelbase at the start of this trajectory. The heading of the swerve drive (gyro angle) throughout the trajectory is controlled by the `targetAngle` input in the `DriveTrajectoryCommand` - a swerve can have a heading completely independently of the wheelbase angle
 - **Ending Pose:** the x and y position of the ending waypoint (in meters) and the robot angle at that position (in degrees). See description above for how to choose angle.
