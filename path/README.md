@@ -105,7 +105,7 @@ Some other helpful resources for troubleshooting/completing the challenges inclu
 
 ### TOML File Format
 
-An [example TOML file](./path/src/main/paths/examplePath.toml) has been provided to show proper file formatting. Key information in the file is as follows:
+An [example TOML file](./src/main/deploy/paths/examplePath.toml) has been provided to show proper file formatting. Key information in the file is as follows:
 - **Starting Pose:** the x and y position of the starting waypoint (in meters) and the robot angle at that position (in degrees)
     - The angle for this pose is easiest to think about when considering a tank drivetrain - this is the angle of the wheelbase at the start of this trajectory. The heading of the swerve drive (gyro angle) throughout the trajectory is controlled by the `targetAngle` input in the `DriveTrajectoryCommand` - a swerve can have a heading completely independently of the wheelbase angle
 - **Ending Pose:** the x and y position of the ending waypoint (in meters) and the robot angle at that position (in degrees). See description above for how to choose angle.
