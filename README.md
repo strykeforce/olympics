@@ -39,7 +39,7 @@ Following kick-off each team creates a name for themselves.
 - Sponsor List and Presentation
 - Create Alliance Award
 - Assemble Gearbox
-- Chassis Robot
+- [Chassis Robot](./chassis/README.md)
 - Elevator Motor Tuning
 
 ### Scoring
