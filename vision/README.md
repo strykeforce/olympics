@@ -90,10 +90,10 @@ to detect the target and filter out false targets.
 
 Each team will have access to their own Deadeye unit:
 
-- [deadeye-h](http://192.168.3.10)
-- [deadeye-i](http://192.168.3.11)
-- [deadeye-j](http://192.168.3.12)
-- [deadeye-k](http://192.168.3.13)
+- Team A: [deadeye-h](http://192.168.3.10)
+- Team B: [deadeye-i](http://192.168.3.11)
+- Team C: [deadeye-j](http://192.168.3.12)
+- Team D: [deadeye-k](http://192.168.3.13)
 
 There are three cameras available in each Deadeye unit, each configured with
 one of the standard vision processing pipelines. For example, Deadeye unit H
