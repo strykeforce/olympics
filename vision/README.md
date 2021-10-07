@@ -95,7 +95,6 @@ Each team will have access to their own Deadeye unit:
 - [deadeye-j](http://192.168.3.12)
 - [deadeye-k](http://192.168.3.13)
 
-
 There are three cameras available in each Deadeye unit, each configured with
 one of the standard vision processing pipelines. For example, Deadeye unit H
 has:
@@ -103,3 +102,6 @@ has:
 - `H0` - UprightRectPipeline
 - `H1` - MinAreaRectPipeline
 - `H2` - TargetListPipeline
+
+**Tip:** A walkthough for the "Find the Target" challenge is found in Deadeye's
+[Quickstart](https://deadeye.readthedocs.io/en/latest/) documentation.
