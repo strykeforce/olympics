@@ -49,6 +49,7 @@ public class DriveSubsystem extends MeasurableSubsystem{
     private Double trajectoryActive = 0.0;
 
     public DriveSubsystem(TelemetryService telemetryService){
+        //Configure Swerve Drive
         var moduleBuilder = new TalonSwerveModule.Builder()
             .driveGearRatio(DriveConstants.kDriveGearRatio)
             .wheelDiameterInches(DriveConstants.kWheelDiameterInches)
@@ -57,6 +58,7 @@ public class DriveSubsystem extends MeasurableSubsystem{
         TalonSwerveModule[] swerveModules = new TalonSwerveModule[4];
         Translation2d[] wheelLocations = DriveConstants.getWheelLocationMeters();
 
+        //Initialize talon/falcon configs for each wheel
         for(int i = 0; i < 4; i++){
             var azimuthTalon = new TalonSRX(i);
             azimuthTalon.configFactoryDefault(kTalonConfigTimeout);
@@ -70,6 +72,7 @@ public class DriveSubsystem extends MeasurableSubsystem{
             driveTalon.configAllSettings(DriveConstants.getDriveTalonConfig(), kTalonConfigTimeout);
             driveTalon.enableVoltageCompensation(true);
             driveTalon.setNeutralMode(NeutralMode.Brake);
+            driveTalon.setInverted(true);
 
             swerveModules[i] = moduleBuilder
                 .azimuthTalon(azimuthTalon)
@@ -86,11 +89,13 @@ public class DriveSubsystem extends MeasurableSubsystem{
         swerveDrive.resetGyro();
 
         //Setup Holonomic Controller
+        ProfiledPIDController omegaCont = new ProfiledPIDController(DriveConstants.kPOmega, DriveConstants.kIOmega, DriveConstants.kDOmega,
+            new TrapezoidProfile.Constraints(DriveConstants.kMaxOmega, DriveConstants.kMaxAccelOmega));
+        omegaCont.enableContinuousInput(Math.toRadians(-180), Math.toRadians(180));
         holonomicController = new HolonomicDriveController(
             new PIDController(DriveConstants.kPHolonomic, DriveConstants.kIHoonomic, DriveConstants.kDHolonomic), 
             new PIDController(DriveConstants.kPHolonomic, DriveConstants.kIHoonomic, DriveConstants.kDHolonomic), 
-            new ProfiledPIDController(DriveConstants.kPOmega, DriveConstants.kIOmega, DriveConstants.kDOmega, 
-                new TrapezoidProfile.Constraints(DriveConstants.kMaxVelOmega, DriveConstants.kMaxAccelOmega))
+            omegaCont
         );
         //Disabling the holonomic controller makes the robot directly follow the trajectory output (no closing the loop on x,y,theta errors)
         holonomicController.setEnabled(true); 
@@ -98,19 +103,26 @@ public class DriveSubsystem extends MeasurableSubsystem{
 
     @Override
     public void periodic() {
+        //Update swerve module states every robot loop
         swerveDrive.periodic();
     }
 
+    //Open-Loop Swerve Movements
     public void drive(double vXmps, double vYmps, double vOmegaRadps){
         swerveDrive.drive(vXmps, vYmps, vOmegaRadps, true);
     }
 
+    //Closed-Loop (Velocity-Controlled) Swerve Movements
     public void move(double vXmps, double vYmps, double vOmegaRadps, Boolean isFieldOriented){
         swerveDrive.move(vXmps, vYmps, vOmegaRadps, isFieldOriented);
     }
 
     public void resetGyro(){
         swerveDrive.resetGyro();
+    }
+
+    public void setGyroOffset(Rotation2d rotation){
+        swerveDrive.setGyroOffset(rotation);
     }
 
     public void resetOdometry(Pose2d pose){
@@ -178,6 +190,7 @@ public class DriveSubsystem extends MeasurableSubsystem{
 
     }
 
+    //Make whether a trajectory is currently active obvious on grapher
     public void grapherTrajectoryActive(Boolean active){
         if(active) trajectoryActive = 1.0;
         else trajectoryActive = 0.0;
@@ -185,7 +198,7 @@ public class DriveSubsystem extends MeasurableSubsystem{
 
 
 
-    //Measureaable Implementation - Grapher Support
+    //Measureable Implementation - Grapher Support
     @Override
     public Set<Measure> getMeasures() {
         return Set

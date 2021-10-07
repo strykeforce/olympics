@@ -28,13 +28,15 @@ import edu.wpi.first.wpilibj.geometry.Translation2d;
 public final class Constants {
     public final static int kTalonConfigTimeout = 10; // ms
     private static final Logger logger = LoggerFactory.getLogger(Constants.class);
+    private static final double wheelbaseWidth = 0.765;
+    private static final double wheelbaseHeight = 0.525;
 
     public static final class DriveConstants {
 
-        public static final double kWheelDiameterInches = 3.0 * (508.0 / 504.0);
+        public static final double kWheelDiameterInches = 3.0 * (508.0 / 504.0); //Adjusted to get accurate tick/in open-loop
         public static final double kMaxSpeedMetersPerSecond = 3.53568;
         public static final double kMaxOmega =
-            (kMaxSpeedMetersPerSecond / Math.hypot(0.525 / 2.0, 0.765 / 2.0))
+            (kMaxSpeedMetersPerSecond / Math.hypot(wheelbaseHeight / 2.0, wheelbaseWidth / 2.0))
                 / 2.0; // wheel locations below
     
         // Skippy
@@ -51,8 +53,8 @@ public final class Constants {
     
         public static Translation2d[] getWheelLocationMeters() {
           // gif is rectangular frame
-          final double x = 0.525 / 2.0; // front-back
-          final double y = 0.765 / 2.0; // left-right
+          final double x = wheelbaseHeight / 2.0; // front-back
+          final double y = wheelbaseWidth / 2.0; // left-right
           Translation2d[] locs = new Translation2d[4];
           locs[0] = new Translation2d(x, y); // left front
           locs[1] = new Translation2d(x, -y); // right front
@@ -111,7 +113,7 @@ public final class Constants {
         public static final double kPHolonomic = 6.0;
         public static final double kIHoonomic = 0.0;
         public static final double kDHolonomic = kPHolonomic/ 100.0;
-        public static final double kPOmega = -2.5;
+        public static final double kPOmega = 2.5;
         public static final double kIOmega = 0.0;
         public static final double kDOmega = 0.0;
         public static final double kMaxVelOmega = kMaxOmega/ 2.0;

@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.geometry.Pose2d;
 import edu.wpi.first.wpilibj.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.trajectory.Trajectory;
 import edu.wpi.first.wpilibj2.command.CommandBase;
@@ -20,14 +21,15 @@ public class DriveTrajectoryCommand extends CommandBase{
     public DriveTrajectoryCommand(DriveSubsystem driveSubsystem, String trajectoryName, Double targetAngle){
         addRequirements(driveSubsystem);
         this.driveSubsystem = driveSubsystem;
-        desiredAngle = Rotation2d.fromDegrees(targetAngle);
+        desiredAngle = Rotation2d.fromDegrees(targetAngle); //Desired swerve heading through full trajectory
         trajectory = driveSubsystem.generateTrajectory(trajectoryName);
         timer.start();
     }
 
     @Override
     public void initialize() {
-        driveSubsystem.resetOdometry(trajectory.getInitialPose());
+        Pose2d initialPose = trajectory.getInitialPose();
+        driveSubsystem.resetOdometry(new Pose2d(initialPose.getTranslation(),desiredAngle));
         driveSubsystem.grapherTrajectoryActive(true);
         timer.reset();
         logger.info("Begin Trajectory");

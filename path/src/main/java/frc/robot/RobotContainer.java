@@ -40,7 +40,7 @@ public class RobotContainer {
       () -> {
         double vx = getLeftX() * -DriveConstants.kMaxSpeedMetersPerSecond;
         double vy = getLeftY() * -DriveConstants.kMaxSpeedMetersPerSecond;
-        double omega = getRightY() * DriveConstants.kMaxOmega;
+        double omega = getRightY() * -DriveConstants.kMaxOmega;
         driveSubsystem.drive(vx, vy, omega);
       }, driveSubsystem));
 
@@ -58,7 +58,7 @@ public class RobotContainer {
   private void configureButtonBindings() {
     new JoystickButton(joystick, InterlinkButton.RESET.id).whenPressed(driveSubsystem::resetGyro, driveSubsystem);
     new JoystickButton(joystick, InterlinkButton.HAMBURGER.id).whenPressed(() -> {driveSubsystem.resetOdometry(new Pose2d());},driveSubsystem);
-    new JoystickButton(joystick, InterlinkButton.X.id).whenPressed(new DriveTrajectoryCommand(driveSubsystem, "examplePath", 0.0));
+    new JoystickButton(joystick, InterlinkButton.X.id).whenPressed(new DriveTrajectoryCommand(driveSubsystem, "examplePath", 180.0));
   }
 
   //Interlink Controller Mapping

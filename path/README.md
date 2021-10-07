@@ -101,6 +101,7 @@ Some other helpful resources for troubleshooting/completing the challenges inclu
     - follow the instructions in [WPILIB readthedocs](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/pathweaver/adding-field-images.html) to add these images to the field options in pathweaver.
     - There is already a pathweaver project in this directory - just import it
     - In order to use the existing code you don't want to build and use pathweaver directly - instead look at the waypoints listed in the .path file in the *PathWeaver/Paths* folder and copy these into the TOML file format below
+    - The origin location is already corrected to be bottom left for the olympics field images in pathweaver, so you should be able to directly copy the x,y locations
 
 
 ### TOML File Format
@@ -117,6 +118,33 @@ An [example TOML file](./src/main/deploy/paths/examplePath.toml) has been provid
 - **Is Reversed:** A boolean value indicating whether the direction of robot travel is backwards 
     - The easiest way to decide whether this must be `true` or not is to think of if a tank drive was driving this path, would the wheels need to rotate forward or backwards
 
+### What is Already Implemented
+
+**DriveSubsystem.java**
+- Swerve drive already created and configured to work with Jiff chassis
+- Talon and Falcon configs already applied (including current limiting and PID tuning)
+- Method to read in trajectory TOML file given a filename and return a generated trajectory provided
+- Method to update the Holonomic controller outputs (given a desired state) and apply this new output to the swerve
+- Registering basic helpful kinematics, odometry, and holonomic controller info to grapher
+
+**DriveTrajectoryCommand.java**
+- Takes input trajectory filename and calculates trajectory
+- Timer implemented to keep track of where to sample trajectory file and when to stop path
+- Take in a desired heading (accounts for only a single heading through the whole path) and feeds into holonomic controller
+- Calls to update holonomic controller/swerve outputs each robot loop
+
+**RobotContainer.java**
+- Joystick/subsystems created
+- Enums to map Interlink controller added
+- Default command for driveSubsystem (telop swerve driving) implemented
+- Reset gyro button (refresh button)
+- Reset odometry button (hamburger button)
+- Run DriveTrajectoryCommand for example path button (X button)
+
+**Constants.java**
+- Talon/Falcon Config parameters
+- All swerve drive config parameters
+- Holonomic controller config parameters
 
 ## Bonus: *"the why"* -  Auton Highlight Reel
 
