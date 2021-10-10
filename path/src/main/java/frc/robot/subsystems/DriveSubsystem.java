@@ -72,7 +72,6 @@ public class DriveSubsystem extends MeasurableSubsystem{
             driveTalon.configAllSettings(DriveConstants.getDriveTalonConfig(), kTalonConfigTimeout);
             driveTalon.enableVoltageCompensation(true);
             driveTalon.setNeutralMode(NeutralMode.Brake);
-            driveTalon.setInverted(true);
 
             swerveModules[i] = moduleBuilder
                 .azimuthTalon(azimuthTalon)
@@ -186,7 +185,7 @@ public class DriveSubsystem extends MeasurableSubsystem{
         holoContInput = desiredState;
         holoContAngle = desiredAngle;
         holoContOutput = holonomicController.calculate(getPoseMeters(), desiredState, desiredAngle);
-        move(holoContOutput.vxMetersPerSecond, holoContOutput.vyMetersPerSecond, holoContOutput.omegaRadiansPerSecond, true);
+        move(holoContOutput.vxMetersPerSecond, holoContOutput.vyMetersPerSecond, holoContOutput.omegaRadiansPerSecond, false);
 
     }
 

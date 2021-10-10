@@ -58,7 +58,7 @@ public class RobotContainer {
   private void configureButtonBindings() {
     new JoystickButton(joystick, InterlinkButton.RESET.id).whenPressed(driveSubsystem::resetGyro, driveSubsystem);
     new JoystickButton(joystick, InterlinkButton.HAMBURGER.id).whenPressed(() -> {driveSubsystem.resetOdometry(new Pose2d());},driveSubsystem);
-    new JoystickButton(joystick, InterlinkButton.X.id).whenPressed(new DriveTrajectoryCommand(driveSubsystem, "examplePath", 180.0));
+    new JoystickButton(joystick, InterlinkButton.X.id).whenPressed(new DriveTrajectoryCommand(driveSubsystem, "examplePath", 0.0));
   }
 
   //Interlink Controller Mapping
