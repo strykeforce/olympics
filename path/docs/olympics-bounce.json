@@ -1,0 +1,10 @@
+{
+    "game" : "2767 Olympics - Bounce",
+    "field-image" : "olympics-bounce.png",
+    "field-corners":{
+        "top-left": [0,0],
+        "bottom-right": [957,616]
+    },
+    "field-size":[7,4.5],
+    "field-unit":"meter"
+    }

@@ -34,12 +34,12 @@ Following kick-off each team creates a name for themselves.
 ### Events
 
 - [Computer Vision](./vision/README.md)
-- Autonomous Pathfinding
+- [Autonomous Pathfinding](./path/README.md)
 - [Elevator and Arm Control](./commands/README.md)
 - Sponsor List and Presentation
 - Create Alliance Award
 - Assemble Gearbox
-- Chassis Robot
+- [Chassis Robot](./chassis/README.md)
 - Elevator Motor Tuning
 
 ### Scoring
