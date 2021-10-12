@@ -17,11 +17,14 @@ computer vision to determine the position of simulated robot on the field.
 **Table of Contents**
 
 - [Objectives](#objectives)
-  - [Find the target](#find-the-target)
-  - [Determine angle and range to target](#determine-angle-and-range-to-target)
-  - [Calculate robot's field position](#calculate-robots-field-position)
+  - [Find the target (5 points)](#find-the-target-5-points)
+    - [Challenge One (2 of 5 points)](#challenge-one-2-of-5-points)
+    - [Challenge Two (2 of 5 points)](#challenge-two-2-of-5-points)
+    - [Challenge Three (1 of 5 points)](#challenge-three-1-of-5-points)
+  - [Determine angle and range to target (10 points)](#determine-angle-and-range-to-target-10-points)
+  - [Calculate robot's field position (15 points)](#calculate-robots-field-position-15-points)
 - [Scoring](#scoring)
-- [Getting Started](#getting-started)
+- [Team Information](#team-information)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -39,30 +42,53 @@ Deadeye vision system and also come with data regarding the field position they
 were taken from. You can use these sample images to check the accuracy of your
 programs; just be aware—new photos will be provided for the actual event!
 
-### Find the target
-
-Awards: **5 points**
+### Find the target (5 points)
 
 Given an image, how well can you screen out false targets and isolate the real
 target? This filtering should work from multiple angles and distances.
 
 Points are awarded for obtaining accurate data returned by the Deadeye system.
 
-See the [Getting Started](#getting-started) section for tips on sending data
-from the Deadeye system to your robot code.
+#### Challenge One (2 of 5 points)
 
-### Determine angle and range to target
+This first challenge will get you familiar with using the Deadeye dashboard and
+getting target data to your robot program. You will simply need to complete
+Deadeye's [Quickstart](https://deadeye.readthedocs.io/en/latest/) walkthrough
+to get two points!
 
-Awards: **10 points**
+#### Challenge Two (2 of 5 points)
+
+This challenge will use the target data returned from Deadeye in a simulated
+robot shooting command.
+
+1. For this challenge, configure the Deadeye dashboard to return target data
+   from the large **U-shaped** target in the provided test image.
+
+2. Create or reuse a robot program with a configured ``DeadeyeX0`` class (where
+   ``X`` is the Deadeye unit you are using).
+
+3. Create a ``ShooterSubsystem`` and a ``ShootCommand`` in your robot program.
+
+4. The ``ShootCommand`` calls ``ShooterSubsystem.shoot()`` when a controller
+   button is pressed.
+
+5. When the ``ShooterSubsystem.shoot()`` method is called, it will use the
+   ``DeadeyeX0`` object to retrieve the U-shaped target coordinates and print
+   them in the log.
+
+#### Challenge Three (1 of 5 points)
+
+Repeat challenge two, this time returning target data from the large **vertical
+line** target in the provided test image.
+
+### Determine angle and range to target (10 points)
 
 Use the data returned by the Deadeye system to calculate the angle and range to
 the target with respect to the robot.
 
 Points are awarded based on the least angle and range error.
 
-### Calculate robot's field position
-
-Awards: **15 points**
+### Calculate robot's field position (15 points)
 
 Having calculated angle and range to the target, can you calculate the position
 of the robot on the field?
@@ -83,7 +109,7 @@ In the case of a tie, the average of the available points will be given to each
 team. For example, a tie for first place will award the average of the first
 and second place points to each team (N points).
 
-## Getting Started
+## Team Information
 
 You will use the Deadeye vision system's web dashboard to configure the camera
 to detect the target and filter out false targets.
@@ -103,5 +129,3 @@ has:
 - `H1` - MinAreaRectPipeline
 - `H2` - TargetListPipeline
 
-**Tip:** A walkthough for the "Find the Target" challenge is found in Deadeye's
-[Quickstart](https://deadeye.readthedocs.io/en/latest/) documentation.
