@@ -16,21 +16,21 @@ computer vision to determine the position of simulated robot on the field.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Objectives](#objectives)
-  - [Find the target (5 points)](#find-the-target-5-points)
-    - [Challenge One (2 of 5 points)](#challenge-one-2-of-5-points)
-    - [Challenge Two (2 of 5 points)](#challenge-two-2-of-5-points)
-    - [Challenge Three (1 of 5 points)](#challenge-three-1-of-5-points)
-  - [Determine angle and range to target (10 points)](#determine-angle-and-range-to-target-10-points)
-  - [Calculate robot's field position (15 points)](#calculate-robots-field-position-15-points)
+- [Challenges](#challenges)
+  - [Challenge 1: Find the target (5 points)](#challenge-1-find-the-target-5-points)
+    - [Objective One (2 of 5 points)](#objective-one-2-of-5-points)
+    - [Objective Two (2 of 5 points)](#objective-two-2-of-5-points)
+    - [Objective Three (1 of 5 points)](#objective-three-1-of-5-points)
+  - [Challenge 2: Determine angle and range to target (10 points)](#challenge-2-determine-angle-and-range-to-target-10-points)
+  - [Challenge 3: Calculate robot's field position (15 points)](#challenge-3-calculate-robots-field-position-15-points)
 - [Scoring](#scoring)
 - [Team Information](#team-information)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Objectives
+## Challenges
 
-There are three objectives in this event, each incrementally more challenging
+There are three challenges in this event, each incrementally more difficult
 then the previous. Each objective gives points towards winning the computer
 vision event.
 
@@ -42,21 +42,22 @@ Deadeye vision system and also come with data regarding the field position they
 were taken from. You can use these sample images to check the accuracy of your
 programs; just be aware—new photos will be provided for the actual event!
 
-### Find the target (5 points)
+### Challenge 1: Find the target (5 points)
 
 Given an image, how well can you screen out false targets and isolate the real
-target? This filtering should work from multiple angles and distances.
+target?  Points are awarded for obtaining accurate data returned by the Deadeye
+system.
 
-Points are awarded for obtaining accurate data returned by the Deadeye system.
+<img alt="test target image" src="https://deadeye.readthedocs.io/en/latest/_images/target.jpg" width="640" />
 
-#### Challenge One (2 of 5 points)
+#### Objective One (2 of 5 points)
 
 This first challenge will get you familiar with using the Deadeye dashboard and
 getting target data to your robot program. You will simply need to complete
 Deadeye's [Quickstart](https://deadeye.readthedocs.io/en/latest/) walkthrough
 to get two points!
 
-#### Challenge Two (2 of 5 points)
+#### Objective Two (2 of 5 points)
 
 This challenge will use the target data returned from Deadeye in a simulated
 robot shooting command.
@@ -76,19 +77,19 @@ robot shooting command.
    ``DeadeyeX0`` object to retrieve the U-shaped target coordinates and print
    them in the log.
 
-#### Challenge Three (1 of 5 points)
+#### Objective Three (1 of 5 points)
 
 Repeat challenge two, this time returning target data from the large **vertical
 line** target in the provided test image.
 
-### Determine angle and range to target (10 points)
+### Challenge 2: Determine angle and range to target (10 points)
 
 Use the data returned by the Deadeye system to calculate the angle and range to
 the target with respect to the robot.
 
 Points are awarded based on the least angle and range error.
 
-### Calculate robot's field position (15 points)
+### Challenge 3: Calculate robot's field position (15 points)
 
 Having calculated angle and range to the target, can you calculate the position
 of the robot on the field?
