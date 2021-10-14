@@ -6,15 +6,16 @@ Being able to navigate smoothly and accurately between two locations on the fiel
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents** 
 
-  - [Objectives](#objectives)
-    - [Straight Line Path](#straight-line-path)
-    - [Figure Eight Path](#figure-eight-path)
-    - [Bounce Path](#bounce-path)
-  - [Scoring](#scoring)
-    - [Scoring - Penalties](#scoring---penalties)
-  - [Getting Started](#getting-started)
-    - [TOML File Format](#toml-file-format)
-  - [Bonus: *"the why"* -  Auton Highlight Reel](#bonus-the-why----auton-highlight-reel)
+- [Objectives](#objectives)
+  - [Straight Line Path](#straight-line-path)
+  - [Figure Eight Path](#figure-eight-path)
+  - [Bounce Path](#bounce-path)
+- [Scoring](#scoring)
+  - [Scoring - Penalties](#scoring---penalties)
+- [Getting Started](#getting-started)
+  - [TOML File Format](#toml-file-format)
+  - [What is Already Implemented](#what-is-already-implemented)
+- [Bonus: *"the why"* -  Auton Highlight Reel](#bonus-the-why----auton-highlight-reel)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
