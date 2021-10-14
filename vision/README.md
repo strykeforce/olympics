@@ -23,6 +23,9 @@ computer vision to determine the position of simulated robot on the field.
     - [Objective Three (1 of 5 points)](#objective-three-1-of-5-points)
   - [Challenge 2: Determine angle and range to target (10 points)](#challenge-2-determine-angle-and-range-to-target-10-points)
   - [Challenge 3: Calculate robot's field position (15 points)](#challenge-3-calculate-robots-field-position-15-points)
+    - [Objective One (3 of 15 points)](#objective-one-3-of-15-points)
+    - [Objective Two (2 of 15 points)](#objective-two-2-of-15-points)
+    - [Objective Three (10 of 15 points)](#objective-three-10-of-15-points)
 - [Scoring](#scoring)
 - [Team Information](#team-information)
 
@@ -94,7 +97,30 @@ Points are awarded based on the least angle and range error.
 Having calculated angle and range to the target, can you calculate the position
 of the robot on the field?
 
-Points are awarded based on the least position error.
+
+#### Objective One (3 of 15 points)
+
+Given the following:
+
+- range to center of target (cm)
+- target angle from camera centerline (deg)
+- robot camera angle relative to the field (deg)
+
+Calculate the position of the robot on the field using Excel, Google Sheets or
+Stryke Force Jupyterhub. Show your work.
+
+Points are awarded based on the least position error and how well you can
+explain your solution.
+
+#### Objective Two (2 of 15 points)
+
+Implement your solution to objective one as robot code using a ``Command`` and
+``Subsystem``.
+
+#### Objective Three (10 of 15 points)
+
+Given a sample target image, write a robot program that calculates the robot's
+position.
 
 ## Scoring
 
