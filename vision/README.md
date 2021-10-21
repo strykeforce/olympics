@@ -90,6 +90,24 @@ line** target in the provided test image.
 Use the data returned by the Deadeye system to calculate the angle and range to
 the target with respect to the robot.
 
+1. Select and configure a Deadeye vision pipeline like you did in challenge 1.
+   Sample images and field position data they were taken from are in the
+   [samples folder](samples/README.md). Note the differences in target data
+   returned by each of the different pipeline types.
+
+2. Create or reuse a robot program with a configured ``DeadeyeX0`` class (where
+   ``X`` is the Deadeye unit you are using).
+
+3. Create a ``ShooterSubsystem`` and a ``ShootCommand`` in your robot program.
+
+4. The ``ShootCommand`` calls ``ShooterSubsystem.shoot()`` when a controller
+   button is pressed.
+
+5. When the ``ShooterSubsystem.shoot()`` method is called, it will use the
+   ``DeadeyeX0`` object to retrieve the U-shaped target coordinates and print
+   the range to the target and the angle to the target centerline from the
+   camera centerline.
+
 Points are awarded based on the least angle and range error.
 
 ### Challenge 3: Calculate robot's field position (15 points)
