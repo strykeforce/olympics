@@ -4,7 +4,8 @@
   "description": "Stryke Force Olympics",
   "main": "index.js",
   "scripts": {
-    "toc": "doctoc README.md vision/README.md commands/README.md path/README.md"
+    "toc": "doctoc README.md vision/README.md commands/README.md path/README.md",
+    "preview": "grip README.md 0.0.0.0"
   },
   "repository": {
     "type": "git",
