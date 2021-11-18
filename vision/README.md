@@ -1,4 +1,5 @@
 # Computer Vision Event
+
 <!--
 9/23 kick-off
 11/11 end of competition
@@ -6,7 +7,7 @@
 
 Most seasons we use a camera on our robot to help us do things like
 shoot at a goal or locate objectives on the field. Doing this quickly and
-accurately without human involvement (or *autonomously*) is a key part of our
+accurately without human involvement (or _autonomously_) is a key part of our
 game plan.
 
 The objective of this Stryke Force Olympics event is to learn how to use
@@ -14,6 +15,7 @@ computer vision to determine the position of simulated robot on the field.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 **Table of Contents**
 
 - [Challenges](#challenges)
@@ -48,16 +50,16 @@ programs; just be aware—new photos will be provided for the actual event!
 ### Challenge 1: Find the target (5 points)
 
 Given an image, how well can you screen out false targets and isolate the real
-target?  Points are awarded for obtaining accurate data returned by the Deadeye
+target? Points are awarded for obtaining accurate data returned by the Deadeye
 system.
 
-<img alt="test target image" src="https://deadeye.readthedocs.io/en/latest/_images/target.jpg" width="640" />
+<img alt="test target image" src="https://strykeforce.github.io/deadeye/images/target.jpg" width="640" />
 
 #### Objective One (2 of 5 points)
 
 This first challenge will get you familiar with using the Deadeye dashboard and
 getting target data to your robot program. You will simply need to complete
-Deadeye's [Quickstart](https://deadeye.readthedocs.io/en/latest/) walkthrough
+Deadeye's [Quickstart](https://strykeforce.github.io/deadeye/) walkthrough
 to get two points!
 
 #### Objective Two (2 of 5 points)
@@ -68,16 +70,16 @@ robot shooting command.
 1. For this challenge, configure the Deadeye dashboard to return target data
    from the large **U-shaped** target in the provided test image.
 
-2. Create or reuse a robot program with a configured ``DeadeyeX0`` class (where
-   ``X`` is the Deadeye unit you are using).
+2. Create or reuse a robot program with a configured `DeadeyeX0` class (where
+   `X` is the Deadeye unit you are using).
 
-3. Create a ``ShooterSubsystem`` and a ``ShootCommand`` in your robot program.
+3. Create a `ShooterSubsystem` and a `ShootCommand` in your robot program.
 
-4. The ``ShootCommand`` calls ``ShooterSubsystem.shoot()`` when a controller
+4. The `ShootCommand` calls `ShooterSubsystem.shoot()` when a controller
    button is pressed.
 
-5. When the ``ShooterSubsystem.shoot()`` method is called, it will use the
-   ``DeadeyeX0`` object to retrieve the U-shaped target coordinates and print
+5. When the `ShooterSubsystem.shoot()` method is called, it will use the
+   `DeadeyeX0` object to retrieve the U-shaped target coordinates and print
    them in the log.
 
 #### Objective Three (1 of 5 points)
@@ -95,16 +97,16 @@ the target with respect to the robot.
    [samples folder](samples/README.md). Note the differences in target data
    returned by each of the different pipeline types.
 
-2. Create or reuse a robot program with a configured ``DeadeyeX0`` class (where
-   ``X`` is the Deadeye unit you are using).
+2. Create or reuse a robot program with a configured `DeadeyeX0` class (where
+   `X` is the Deadeye unit you are using).
 
-3. Create a ``ShooterSubsystem`` and a ``ShootCommand`` in your robot program.
+3. Create a `ShooterSubsystem` and a `ShootCommand` in your robot program.
 
-4. The ``ShootCommand`` calls ``ShooterSubsystem.shoot()`` when a controller
+4. The `ShootCommand` calls `ShooterSubsystem.shoot()` when a controller
    button is pressed.
 
-5. When the ``ShooterSubsystem.shoot()`` method is called, it will use the
-   ``DeadeyeX0`` object to retrieve the U-shaped target coordinates and print
+5. When the `ShooterSubsystem.shoot()` method is called, it will use the
+   `DeadeyeX0` object to retrieve the U-shaped target coordinates and print
    the range to the target and the angle to the target centerline from the
    camera centerline.
 
@@ -114,7 +116,6 @@ Points are awarded based on the least angle and range error.
 
 Having calculated angle and range to the target, can you calculate the position
 of the robot on the field?
-
 
 #### Objective One (3 of 15 points)
 
@@ -132,8 +133,8 @@ explain your solution.
 
 #### Objective Two (2 of 15 points)
 
-Implement your solution to objective one as robot code using a ``Command`` and
-``Subsystem``.
+Implement your solution to objective one as robot code using a `Command` and
+`Subsystem`.
 
 #### Objective Three (10 of 15 points)
 
@@ -173,4 +174,3 @@ has:
 - `H0` - UprightRectPipeline
 - `H1` - MinAreaRectPipeline
 - `H2` - TargetListPipeline
-
